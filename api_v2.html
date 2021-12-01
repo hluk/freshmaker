@@ -165,8 +165,8 @@ the order will be descending. The default value is <code class="docutils literal
 </dd>
 <dt class="field-even">Status Codes</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Requested events are returned.</p></li>
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 Not Found</a> – Freshmaker event not found.</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Requested events are returned.</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 Not Found</a> – Freshmaker event not found.</p></li>
 </ul>
 </dd>
 </dl>
@@ -203,8 +203,8 @@ the order will be descending. The default value is <code class="docutils literal
 </dd>
 <dt class="field-even">Status Codes</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Requested events are returned.</p></li>
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 Not Found</a> – Freshmaker event not found.</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Requested events are returned.</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 Not Found</a> – Freshmaker event not found.</p></li>
 </ul>
 </dd>
 </dl>
@@ -235,8 +235,8 @@ is supported.</p></li>
 </dd>
 <dt class="field-even">Status Codes</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Cancelled event is returned.</p></li>
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1">400 Bad Request</a> – Action is missing or is unsupported.</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Cancelled event is returned.</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1">400 Bad Request</a> – Action is missing or is unsupported.</p></li>
 </ul>
 </dd>
 </dl>
@@ -254,17 +254,8 @@ is supported.</p></li>
 <span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
 
 <span class="p">{</span>
-    <span class="nt">&quot;errata_id&quot;</span><span class="p">:</span> <span class="mi">12345</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p><strong>Sample request</strong>:</p>
-<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="nf">POST</span> <span class="nn">/api/1/builds</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
-<span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
-
-<span class="p">{</span>
-    <span class="nt">&quot;bundle_images&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;app-bundle-1.0-1.11111&quot;</span><span class="p">],</span>
+    <span class="nt">&quot;errata_id&quot;</span><span class="p">:</span> <span class="mi">12345</span><span class="p">,</span>
+    <span class="nt">&quot;container_images&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foobar-1.2-234&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -283,14 +274,12 @@ which will be used as the dependant event. Successfull builds from
 this event will be reused in the newly created event instead of
 building all the artifacts from scratch. If errata_id is not
 provided, it will be inherited from this Freshmaker event.</p></li>
-<li><p><strong>bundle_images</strong> (<em>list</em>) – list of images to search Freshmaker
-database for rebuild events with them</p></li>
 </ul>
 </dd>
 <dt class="field-even">Status Codes</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – A new event was created.</p></li>
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1">400 Bad Request</a> – The provided input is invalid.</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – A new event was created.</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1">400 Bad Request</a> – The provided input is invalid.</p></li>
 </ul>
 </dd>
 </dl>
@@ -321,8 +310,8 @@ by Freshmaker. If not, returns explanation why.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Status Codes</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Image is handled by Freshmaker.</p></li>
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1">400 Bad Request</a> – Image is not handled by Freshmaker or not found.</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Image is handled by Freshmaker.</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1">400 Bad Request</a> – Image is not handled by Freshmaker or not found.</p></li>
 </ul>
 </dd>
 </dl>
@@ -364,8 +353,8 @@ by Freshmaker. If not, returns explanation why.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Status Codes</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Image repository is handled by Freshmaker.</p></li>
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1">400 Bad Request</a> – Image repository is not handled by Freshmaker or not
+<li><p><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Image repository is handled by Freshmaker.</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1">400 Bad Request</a> – Image repository is not handled by Freshmaker or not
 found.</p></li>
 </ul>
 </dd>
@@ -416,8 +405,8 @@ default value will be pulled from the previous buildContainer task.</p></li>
 </dd>
 <dt class="field-even">Status Codes</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – A new event was created.</p></li>
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1">400 Bad Request</a> – The provided input is invalid.</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – A new event was created.</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1">400 Bad Request</a> – The provided input is invalid.</p></li>
 </ul>
 </dd>
 </dl>
